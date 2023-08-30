@@ -5,7 +5,7 @@ import (
 	"strconv"
 	"strings"
 
-	"gofretch/util"
+	util "gofretch/util/other"
 )
 
 func available() int {

@@ -2,7 +2,7 @@ package sys
 
 import (
 	"bufio"
-	"gofretch/util"
+	"gofretch/util/other"
 	"os"
 	"strings"
 )

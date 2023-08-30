@@ -1,7 +1,7 @@
 package sys
 
 import (
-	"gofretch/util"
+	"gofretch/util/other"
 	"os/exec"
 )
 

@@ -3,7 +3,7 @@ package osinfo
 import (
 	"encoding/json"
 	"fmt"
-	"gofretch/util"
+	"gofretch/util/other"
 	"io"
 	"os"
 	"os/exec"

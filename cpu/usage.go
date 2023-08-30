@@ -2,8 +2,7 @@ package cpu
 
 import (
 	"errors"
-	"gofretch/util"
-	"log"
+	util "gofretch/util/other"
 	"strconv"
 	"strings"
 	"time"
@@ -46,9 +45,9 @@ func getUsageFromProcFile() (int, error) {
 func Usage() string {
 	average, err := getUsageFromProcFile()
 	if err != nil {
-		log.Fatal(err)
-		return ``
+		return "Unknown"
 	}
+
 	usage := strconv.Itoa(average) + "%"
 	return usage
 }

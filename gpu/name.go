@@ -1,7 +1,6 @@
 package gpu
 
 import (
-	"log"
 	"os/exec"
 	"strings"
 )
@@ -10,7 +9,7 @@ func Name() string {
 	var gpus string
 	cmd, err := exec.Command("lspci").Output()
 	if err != nil {
-		log.Fatal("Error: ", err)
+		return "Unknown"
 	}
 	out := strings.Split(string(cmd), "\n")
 	for _, e := range out {
