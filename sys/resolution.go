@@ -2,9 +2,10 @@ package sys
 
 import (
 	"bufio"
-	"gofretch/util/other"
 	"os"
 	"strings"
+
+	util "github.com/Vilez0/gofretch/util/other"
 )
 
 func Resolution() string {

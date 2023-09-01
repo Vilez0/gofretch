@@ -3,12 +3,13 @@ package osinfo
 import (
 	"encoding/json"
 	"fmt"
-	util "gofretch/util/other"
 	"io"
 	"os"
 	"os/exec"
 	"strconv"
 	"strings"
+
+	util "github.com/Vilez0/gofretch/util/other"
 )
 
 var (

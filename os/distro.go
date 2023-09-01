@@ -1,8 +1,9 @@
 package osinfo
 
 import (
-	util "gofretch/util/other"
 	"strings"
+
+	util "github.com/Vilez0/gofretch/util/other"
 )
 
 var (
@@ -24,7 +25,7 @@ func parseOsrelease() []string {
 func DistroName() string {
 	osRelease := parseOsrelease()
 	// find the line is starts with `NAME`, parse it and return the distro name
-	for _,e := range osRelease {
+	for _, e := range osRelease {
 		if strings.HasPrefix(e, "NAME") {
 			name := strings.Split(e, "=")[1]
 			name = strings.ReplaceAll(name, `"`, ``)

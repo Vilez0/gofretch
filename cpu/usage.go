@@ -2,10 +2,11 @@ package cpu
 
 import (
 	"errors"
-	util "gofretch/util/other"
 	"strconv"
 	"strings"
 	"time"
+
+	util "github.com/Vilez0/gofretch/util/other"
 )
 
 var line string

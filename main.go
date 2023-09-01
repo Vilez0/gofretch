@@ -1,6 +1,6 @@
 package main
 
-import "gofretch/util/printUtils"
+import "github.com/Vilez0/gofretch/util/printUtils"
 
 func main() {
 	printUtils.PrintInfo()

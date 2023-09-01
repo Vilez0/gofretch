@@ -2,12 +2,17 @@ package printUtils
 
 import (
 	"fmt"
-	"gofretch/cpu"
-	"gofretch/gpu"
-	"gofretch/mem"
-	"gofretch/sys"
-	osinfo "gofretch/os"
 	"strings"
+
+	"github.com/Vilez0/gofretch/sys"
+
+	"github.com/Vilez0/gofretch/gpu"
+
+	osinfo "github.com/Vilez0/gofretch/os"
+
+	"github.com/Vilez0/gofretch/mem"
+
+	"github.com/Vilez0/gofretch/cpu"
 )
 
 func CheckCommands(info string) string {

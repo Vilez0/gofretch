@@ -1,9 +1,11 @@
 package sys
 
 import (
-	"gofretch/util/other"
 	"os/exec"
+
+	util "github.com/Vilez0/gofretch/util/other"
 )
+
 // ModelName returns the model name of the system
 func ModelName() string {
 	model := "Unknown"

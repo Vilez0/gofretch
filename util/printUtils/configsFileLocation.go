@@ -1,9 +1,11 @@
 package printUtils
 
 import (
-	osinfo "gofretch/os"
-	util "gofretch/util/other"
 	"strings"
+
+	util "github.com/Vilez0/gofretch/util/other"
+
+	osinfo "github.com/Vilez0/gofretch/os"
 )
 
 func getAsciiFileLocation() string {
