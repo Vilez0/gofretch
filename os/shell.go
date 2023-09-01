@@ -7,18 +7,28 @@ import (
 	"strings"
 )
 
+var (
+	shell   string
+	version string
+)
+
+// Shell returns the current shell name and version
 func Shell() string {
+	// regex to match the shell name
 	reShell := regexp.MustCompile(`bash|zsh|fish|fish|csh|tcsh|ksh`)
+	// regex to match the shell version
 	reShellVersion := regexp.MustCompile(`\d+(?:\.\d+){1,}`)
+	// get the shell name
 	shellPath := strings.Split(os.Getenv("SHELL"), "/")
+	// get the shell version
 	shellName := shellPath[len(shellPath)-1]
 	output, err := exec.Command(shellName, "--version").CombinedOutput()
 	if err != nil {
-		panic(err)
+		return "Unknown"
 	}
+	// remove the trailing newline
 	strOutput := strings.TrimSuffix(string(output), "\n")
 
-	var shell, version string
 	if reShell.MatchString(strOutput) {
 		shell = reShell.FindString(strOutput)
 	}

@@ -1,5 +1,7 @@
 package main
 
+import "gofretch/util/printUtils"
+
 func main() {
-	println("Hello World")
+	printUtils.PrintInfo()
 }

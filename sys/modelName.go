@@ -4,9 +4,9 @@ import (
 	"gofretch/util/other"
 	"os/exec"
 )
-
+// ModelName returns the model name of the system
 func ModelName() string {
-	var model string
+	model := "Unknown"
 	if util.FileExists("/system/app/") && util.FileExists("/system/priv-app") {
 		byteBrand, _ := exec.Command("getprop", "ro.product.brand").Output()
 		byteModel, _ := exec.Command("getprop", "ro.product.model").Output()

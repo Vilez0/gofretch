@@ -7,7 +7,7 @@ import (
 )
 
 // Name returns the model name of the CPU.
-func Name() (string) {
+func Name() string {
 	// Open the file.
 	file, err := os.Open("/proc/cpuinfo")
 	if err != nil {

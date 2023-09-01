@@ -1,31 +1,32 @@
 package osinfo
 
 import (
-	"bufio"
-	"os"
+	util "gofretch/util/other"
 	"strings"
 )
 
+var (
+	lines []string
+)
+
+// reads /etc/os-release file then return its lines in a slice
 func parseOsrelease() []string {
-	var lines []string
-	file, err := os.Open("/etc/os-release")
-	if err != nil {
-		file, err = os.Open("/usr/lib/os-release")
+	filename := "/etc/os-release"
+	if !util.FileExists("/etc/os-release") {
+		filename = "/usr/lib/os-release"
 	}
 
-	defer file.Close()
-	scanner := bufio.NewScanner(file)
-	for scanner.Scan() {
-		lines = append(lines, scanner.Text())
-	}
+	lines = util.ScanFile(filename)
+
 	return lines
 }
 
 func DistroName() string {
 	osRelease := parseOsrelease()
-	for e := range osRelease {
-		if strings.Contains(osRelease[e], "NAME") {
-			name := strings.Split(osRelease[e], "=")[1]
+	// find the line is starts with `NAME`, parse it and return the distro name
+	for _,e := range osRelease {
+		if strings.HasPrefix(e, "NAME") {
+			name := strings.Split(e, "=")[1]
 			name = strings.ReplaceAll(name, `"`, ``)
 			return name
 		}

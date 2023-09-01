@@ -8,7 +8,7 @@ import (
 )
 
 func Resolution() string {
-	var resolution string
+	resolution := "Unknown"
 	if util.FileExists("/sys/class/drm") {
 		entries, err := os.ReadDir("/sys/class/drm")
 		if err != nil {
