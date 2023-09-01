@@ -1,0 +1,74 @@
+{
+    "packageManagers": [
+{
+    "name": "butch",
+    "path": "/usr/bin/butch",
+    "params": ["list"]
+},
+{
+    "name": "dpkg",
+    "path": "/usr/bin/dpkg-query",
+    "params": ["-f", "${binary:Package}\n", "-W"]
+},
+{
+    "name": "pacman",
+    "path": "/usr/bin/pacman",
+    "params": ["-Qq","--color", "never"]
+},
+{
+    "name": "kiss",
+    "path": "/usr/bin/kiss",
+    "params": ["l"]
+},
+{
+    "name": "xbps",
+    "path": "/usr/bin/xbps-query",
+    "params": ["-l"]
+},
+{
+    "name": "eopkg",   
+    "path": "/usr/bin/eopkg",
+    "params": ["list-installed"]
+},
+{
+    "name": "rpm",
+    "path": "/usr/bin/rpm",
+    "params": ["-qa"]
+},
+{
+    "name": "pkg",
+    "path": "/usr/bin/pkg",
+    "params": ["info", "-aoq"]
+},
+{
+    "name": "pacstall",
+    "path": "/usr/bin/pacstall",
+    "params": ["-L"]
+},
+{
+    "name": "apk",
+    "path": "/usr/bin/apk",
+    "params": ["info"]
+},
+{
+    "name": "pisi",
+    "path": "/usr/bin/pisi",
+    "params": ["list", "-i"]
+},
+{
+    "name": "swupd",
+    "path": "/usr/bin/swupd",
+    "params": ["bundle-list", "--quiet"]
+},
+{
+    "name": "sorcery",
+    "path": "/usr/bin/sorcery",
+    "params": ["-l"]
+},
+{
+    "name": "flatpak",
+    "path": "/usr/bin/flatpak",
+    "params": ["list"]
+}
+]
+}

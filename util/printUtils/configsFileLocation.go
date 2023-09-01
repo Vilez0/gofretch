@@ -14,7 +14,7 @@ func getAsciiFileLocation() string {
 	codename := strings.ToLower(strings.Split(strings.TrimSpace(distroname), " ")[0])
 	ascciFiles := util.FindFileWithExtension(asciiDir, ".txt")
 	for _, file := range ascciFiles {
-		if strings.Contains(file, codename) {
+		if file == asciiDir+codename+".txt" {
 			asciiFileLocation = file
 			break
 		}

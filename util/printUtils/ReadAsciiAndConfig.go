@@ -75,9 +75,9 @@ func readConfigFile() ([]string, []string) {
 			infos = append(infos, info)
 			commands = append(commands, command)
 		} else if strings.HasPrefix(scanner.Text(), "variable") {
-			replacer := strings.NewReplacer("variable ", "", `"`, "")
+			replacer := strings.NewReplacer("variable ", "", `"`, "", " ", "")
 			text := replacer.Replace(scanner.Text())
-			line := strings.Split(text, "=")
+			line := strings.Split(text, ":")
 			variable := line[0]
 			value := line[1]
 			cheackVariables(variable, value)

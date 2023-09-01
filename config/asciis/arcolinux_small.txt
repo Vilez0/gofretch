@@ -1,0 +1,12 @@
+          A
+         ooo
+        ooooo
+       ooooooo
+      ooooooooo
+     ooooo ooooo
+    ooooo   ooooo
+   ooooo     ooooo
+  ooooo  <oooooooo>
+ ooooo      <oooooo>
+ooooo          <oooo>
+
