@@ -3,9 +3,8 @@
 A neofetch-like tool written in go
 
 ## Screenshots
-
-    ![endeavourOS](img/endeavourOS.png)
-    ![arch](img/arch.png)
+![endeavourOS](img/endeavourOS.png)
+![arch](img/arch.png)
 
 ## Usage
 
