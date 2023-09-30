@@ -14,7 +14,7 @@ func PrintInfo() {
 			fmt.Printf("%s\n", asciiLines[i])
 			continue
 		}
-		fmt.Printf("%s %s:%s\n", asciiLines[i], infos[i], commands[i])
+		fmt.Printf("%s %s: %s\n", asciiLines[i], infos[i], commands[i])
 
 	}
 }
