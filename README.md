@@ -102,4 +102,3 @@ _Note2:_ if your package manager not detected, you can add it to the packageMana
   ]
 }
 ```
-
