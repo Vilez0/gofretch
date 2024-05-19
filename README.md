@@ -78,6 +78,7 @@ will print Arch BTW
 
 there is only 1 variable, for changing the ascii art
 
+
 - asciiFile: path/to/ascii/file
 
 
