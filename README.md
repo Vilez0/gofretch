@@ -78,9 +78,9 @@ will print Arch BTW
 
 there is only 1 variable, for changing the ascii art
 
-
-- asciiFile: path/to/ascii/file
-
+```
+asciiFile: path/to/ascii/file
+```
 
 _Note:_ if your distro ascii art is not in the ascii directory, you can add it there or change the path to the ascii art file
 
